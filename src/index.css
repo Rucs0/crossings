@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-brand-50: #effbfa;
+  --color-brand-100: #d7f3f0;
+  --color-brand-400: #2ba69a;
+  --color-brand-500: #0f766e;
+  --color-brand-600: #0c5f59;
+  --color-brand-700: #0a4d48;
+
+  --color-ink-primary: #0b0b0b;
+  --color-ink-secondary: #52514e;
+  --color-ink-muted: #898781;
+
+  --color-surface: #fcfcfb;
+  --color-surface-plane: #f4f4f1;
+  --color-surface-sunken: #eeeeea;
+
+  --color-line: #e1e0d9;
+  --color-line-strong: #c3c2b7;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface-plane);
+  color: var(--color-ink-primary);
+  font-family: var(--font-sans);
+}
+
+/* Leaflet renders its own control chrome; restyle to match the civic-tech
+   palette instead of the default Leaflet blue. */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #eef1ee;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(11, 11, 11, 0.16);
+}
+
+.leaflet-popup-content {
+  margin: 0.75rem 0.9rem;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+/* Printing an action report: hide everything except its content. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-report,
+  .printable-report * {
+    visibility: visible;
+  }
+  .printable-report {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+}
