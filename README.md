@@ -2,9 +2,9 @@
 
 **A citizen-science web app that turns scattered wildlife road-crossing and vehicle-collision reports into a live danger map and ranked, exportable mitigation recommendations.**
 
-[Live demo](#) &middot; [Demo GIF](#)
+[Live demo](https://crossings.vercel.app) &middot; [Demo GIF](#)
 
-<!-- TODO: replace the links above with the deployed Vercel URL and a demo GIF once recorded -->
+<!-- TODO: add a demo GIF once recorded -->
 
 ---
 
@@ -89,7 +89,7 @@ npm run preview   # serve the production build locally
 
 ## Deploying
 
-The app is a static Vite build with no backend — deploy the `dist/` output to Vercel (or any static host). `vercel.json` includes a rewrite so client-side routes (`/dashboard`, `/about`) resolve correctly on direct load/refresh.
+Live at [crossings.vercel.app](https://crossings.vercel.app), deployed from this repo. The app is a static Vite build with no backend — deploy the `dist/` output to Vercel (or any static host). `vercel.json` includes a rewrite so client-side routes (`/dashboard`, `/about`) resolve correctly on direct load/refresh.
 
 ## Limitations
 
